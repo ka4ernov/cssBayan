@@ -113,3 +113,54 @@ h2 {
 .block:active {
     opacity: .5;
 }
+@media (min-width: 320px) {
+    .main__container {
+        max-width: 320px;
+    }
+    .block:hover > img {
+        height: 25vh;
+    }
+    .block__input:checked ~ .block__img {
+        height: 25vh;
+    }
+}
+@media (min-width: 479px) {
+    .main__container {
+        max-width: 420px;
+    }
+    .block:hover > img {
+        height: 35vh;
+    }
+    .block__input:checked ~ .block__img {
+        height: 35vh;
+    }
+}
+@media (min-width: 576px) {
+    .main__container {
+        max-width: 540px;
+    }
+    .block:hover > img {
+        height: 40vh;
+    }
+    .block__input:checked ~ .block__img {
+        height: 40vh;
+    }
+}
+@media (min-width: 768px) {
+    .main__container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .main__container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}
