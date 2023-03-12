@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    color: #D9DFE8;;
+    background: #2E2E48;
+}
+h1 {
+    padding-top: 40px;
+    padding-bottom: 5px;
+    font-size: 3em;
+    margin: 0;
+    border-bottom: 2px solid #7878b8;
+}
+p {
+    margin: 0;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    border-style: none;
+    display: block;
+    margin: 0 auto;
+}
+h2 {
+    cursor: pointer;
+}
+@media (hover: hover) {
+    h2:hover {
+        background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .block:hover > img {
+        height: 50vh;
+        opacity: 1;
+    }
+    .blocks:hover > .block > .block__header > .block__icon {
+        height: 25px;
+        opacity: 1;
+    }
+    .blocks:hover > .block > .block__header > .block__title {
+        background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .block:hover > .block__header > .block__icon {
+        transform: rotate(45deg);
+    }
+}
+[class*="__container"] {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.block__img {    
+    height: 0px;
+    opacity: 0;
+    transition: 1s;
+}
+.block {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #7878b8;
+    cursor: pointer;
+}
+.block__header {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+.block__icon {
+    height: 0;
+    opacity: 1;
+    transition: .5s;
+}
+
+.block__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.block__input:checked ~ .block__img {
+    height: 50vh;
+    opacity: 1;
+}
+.block__input:checked ~ .block__header > .block__title {
+    background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.block__input:checked ~ .block__header > .block__icon {
+    transform: rotate(45deg);
+}
+.block {
+    transition: .5s;
+}
+.block:active {
+    opacity: .5;
+}
